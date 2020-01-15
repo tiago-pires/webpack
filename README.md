@@ -1,3 +1,11 @@
 # No Config
 
-Just by running `webpack` tell webpack look for a `src/index.js` file and bundle it into `dist/main.js`
+Just run `> webpack` and webpack will look for `src/index.js` entry point file and bundle it into `dist/main.js`
+
+## Run webpack from `package.json`
+
+```
+  "scripts": {
+    "build": "webpack"
+  }
+```
