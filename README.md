@@ -1,6 +1,6 @@
 # Config 
 
-```
+```js
 module.exports = {
     entry: './src/index.js',                      // define custom entry point
     mode: 'development',                          
