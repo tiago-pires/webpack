@@ -1,1 +1,1 @@
-console.log('compiled')
+import './style.css'
