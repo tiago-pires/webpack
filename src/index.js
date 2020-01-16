@@ -1,1 +1,1 @@
-console.log('compiled')
+document.body.style.backgroundColor = 'red';

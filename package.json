@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack"
+    "start": "webpack",
+    "serve": "webpack-dev-server --open --entry ./src/index.js --output-filename ./dist/bundle.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
   }
 }
