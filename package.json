@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^9.7.4",
     "css-loader": "^3.4.2",
     "postcss-loader": "^3.0.0",
     "style-loader": "^1.1.2",
