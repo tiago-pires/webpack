@@ -10,7 +10,7 @@ module.exports = {
     },
     plugins: [
         new htmlWebpackPlugin({
-            template: 'index.html',
+            template: './src/templates/index.html',
             meta: {
                 'viewport': 'width=device-width, initial-scale=1, shrink-to-fit=no',
             }
