@@ -1,5 +1,7 @@
 const path = require('path')
 const htmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin') // remove old /dist files
+
 
 module.exports = {
     entry: './src/index.js',
@@ -9,6 +11,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     plugins:[
-        new htmlWebpackPlugin()
+        new htmlWebpackPlugin(),
+        new CleanWebpackPlugin(),
     ]
 }

@@ -1,1 +1,1 @@
-console.log('compiled')
+console.log('compiled');
