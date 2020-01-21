@@ -1,4 +1,5 @@
-const path = require("path");
+const path = require("path")
+const htmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     mode: 'development',
@@ -6,7 +7,12 @@ module.exports = {
     output: {
         filename: 'build.js',
         path: path.resolve(__dirname, 'dist'),
-        publicPath: '/dist' // specially for webpack-dev-server
+        publicPath: '/' 
+    },
+    devServer: {
+        contentBase: './dist', // serve files from here,
+        hot: true // Hot module replacement
+        // hotOnly: true // Never reload (?)
     },
     module: {
         rules: [
@@ -15,5 +21,10 @@ module.exports = {
                 use: ['style-loader','css-loader']
             }
         ]
-    }
+    },
+    plugins: [
+        new htmlWebpackPlugin({
+            template: './src/index.html'
+        })
+    ]
 }
