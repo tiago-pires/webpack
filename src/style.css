@@ -9,10 +9,6 @@
 
 /* purgecss start ignore */
 
-h1 {
-  font-weight: bold;
-}
-
 ::placeholder {
     color: gray;
 }
