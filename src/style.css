@@ -1,3 +1,20 @@
+.blue {color: blue}
+.yellow {color: yellow}
+.red {color: red}
+.green {color: green}
+.purple {color: purple}
+.cyan {color: cyan}
+.magenta {color: magenta}
+
+
+/* purgecss start ignore */
+
+h1 {
+  font-weight: bold;
+}
+
 ::placeholder {
     color: gray;
-  }
+}
+
+/* purgecss end ignore */
