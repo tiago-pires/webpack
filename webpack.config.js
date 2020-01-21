@@ -13,12 +13,23 @@ module.exports = {
             {
                 test: /\.html$/,
                 use: ['html-loader']
+            },
+            {
+                test: /\.(svg|png|jpg|gif)$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'images',
+                        esModule: false // https://tinyurl.com/s57lzn8
+                    }
+                }
             }
         ]
     },
     plugins: [
         new htmlWebpackPlugin({
-            template: './src/templates/index.html',
+            template: './src/html/index.html',
             meta: {
                 'viewport': 'width=device-width, initial-scale=1, shrink-to-fit=no',
             }
