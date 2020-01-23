@@ -28,8 +28,3 @@ The caveat is that PostCSS and Webpack enviro seams to be independent so setting
    "prod": "NODE_ENV='production' webpack"
 }
 ```
-
-
-
-
-
