@@ -20,7 +20,15 @@ process.env.NODE_ENV === 'production' && require('@fullhuman/postcss-purgecss')(
    ...
 })
 ```
-The caveat is that PostCSS and Webpack enviro seams to be independent so setting the mode with Webpack won't affect postCSS. To solve this I'm passing the `NODE_ENV='...'` with the `package.json` script.
+The caveat is that PostCSS and Webpack enviro seams to be independent so setting the mode with Webpack won't affect postCSS. To solve this I'm passing the `NODE_ENV='...'` with the `package.json` script like:
+
+```javascript 
+"scripts": {
+   "dev": "NODE_ENV='development' webpack --watch",
+   "prod": "NODE_ENV='production' webpack"
+}
+```
+
 
 
 
