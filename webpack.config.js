@@ -1,11 +1,11 @@
 const path = require('path')
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin')
 
-
+const env = process.env.NODE_ENV || 'development'
 
 module.exports = {
     entry: './src/index.js',
-    mode: 'production',
+    mode: env,
     output: {
         filename: 'build.js',
         path: path.resolve(__dirname, 'dist')
@@ -16,15 +16,15 @@ module.exports = {
                 test: /\.css$/,
                 use: [
                     MiniCSSExtractPlugin.loader,
-                    { loader: 'css-loader', options: { importLoaders: 1 } },
-                    'postcss-loader'
+                    'css-loader',
+                    'postcss-sass-loader'
                 ]
             }
         ]
     },
     plugins: [
         new MiniCSSExtractPlugin({
-            filename: '[name].min.css'
+            filename: '[name].css'
         })
     ]
 }

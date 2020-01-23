@@ -1,19 +1,16 @@
 module.exports = {
-	plugins: [
+	    plugins: [
         require('tailwindcss'),
-		require("autoprefixer"),
-		require("@fullhuman/postcss-purgecss")({
+        require('autoprefixer'),
+        process.env.NODE_ENV === 'production' && require('@fullhuman/postcss-purgecss')({
 			content: ["./src/templates/**/*.html"]
+        }),
+        process.env.NODE_ENV === 'production' && require('cssnano')({
+            preset: ['default', {
+                discardComments: {
+                    removeAll: true,
+                },
+            }]
         })
-        ,require("cssnano")({
-			preset: [
-				"default",
-				{
-					discardComments: {
-						removeAll: true
-					}
-				}
-			]
-		})
-	]
-};
+    ]
+}
