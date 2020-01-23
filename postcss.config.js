@@ -1,11 +1,11 @@
 module.exports = {
 	plugins: [
+        require('tailwindcss'),
 		require("autoprefixer"),
 		require("@fullhuman/postcss-purgecss")({
-			content: ["./src/templates/**/*.html"],
-			css: "src/"
-		}),
-		require("cssnano")({
+			content: ["./src/templates/**/*.html"]
+        })
+        ,require("cssnano")({
 			preset: [
 				"default",
 				{

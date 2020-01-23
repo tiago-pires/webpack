@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background: yellow;
+}
+
+.blue {
+    background: blue;
+}
